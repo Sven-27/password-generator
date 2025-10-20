@@ -2,9 +2,9 @@
 function App() {
 
   return (
-    <>
+    <div className="font-jetbrains">
       
-          Password Generator
+          <h1 className="font-jetbrains">Password Generator</h1>
 
   P4$5W0rD!
 
@@ -18,7 +18,7 @@ function App() {
   Strength
 
   Generate
-    </>
+    </div>
   )
 }
 
