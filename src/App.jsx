@@ -2,11 +2,11 @@
 function App() {
 
   return (
-    <div className="font-jetbrains">
+    <div >
       
-          <h1 className="font-jetbrains">Password Generator</h1>
+          <h1>Password Generator</h1>
 
-  P4$5W0rD!
+  <p>P4$5W0rD!</p>
 
   Character Length
 
