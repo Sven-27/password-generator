@@ -2,4 +2,19 @@
 
 @theme {
   --font-jetbrains: 'JetBrains Mono', monospace;
+  --color-white: #FFFFFF;
+  --color-grey-200: #E6E5EA;
+  --color-grey-600: #817D92;
+  --color-grey-700: #54535B;
+  --color-grey-800: #24232C;
+  --color-grey-850: #18171F;
+  --color-grey-900: #14131B;
+  --color-grey-950: #08070B;
+  --color-black: #000000;
+  --color-black-100: #14131B;
+  --color-black-200: #08070B;
+  --color-green: #A4FFAF;
+  --color: yellow: #F8CD65;
+  --color-orange: #FB7C58;
+  --color-red: #F64A4A;
 }
