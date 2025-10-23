@@ -1,7 +1,10 @@
 @import 'tailwindcss';
 
 @theme {
+  /* font family */
   --font-jetbrains: 'JetBrains Mono', monospace;
+
+  /* colors */
   --color-white: #FFFFFF;
   --color-grey-200: #E6E5EA;
   --color-grey-600: #817D92;
@@ -17,4 +20,10 @@
   --color: yellow: #F8CD65;
   --color-orange: #FB7C58;
   --color-red: #F64A4A;
+
+  /* font sizes */
+  --text-32: 2rem; /* with line-height use --text-32/42 */
+  --text-24: 1.5rem; /* with line-height use --text-24/32 */
+  --text-18: 1.125rem; /* with line-height use --text-18/24 */
+  --text-16: 1rem; /* with line-height use --text-16/20 */
 }
