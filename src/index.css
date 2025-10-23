@@ -26,4 +26,17 @@
   --text-24: 1.5rem; /* with line-height use --text-24/32 */
   --text-18: 1.125rem; /* with line-height use --text-18/24 */
   --text-16: 1rem; /* with line-height use --text-16/20 */
+
+  /* spacings */
+  --8: 0.5rem;
+  --16: 1rem;
+  --24: 1.5rem;
+  --32: 2rem;
+  --56: 3.5rem;
+  --80: 5rem;
+  --104: 6.5rem;
+  --128: 8rem;
+  --160: 10rem;
+  --176: 11rem;
+  --184: 11.5rem;
 }

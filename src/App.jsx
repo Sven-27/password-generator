@@ -6,7 +6,7 @@ function App() {
       
           <h1>Password Generator</h1>
 
-  <p className="text-grey-600 text-32/42">P4$5W0rD!</p>
+  <p className="text-grey-600 text-32 bg-green p-32">P4$5W0rD!</p>
 
   Character Length
 
