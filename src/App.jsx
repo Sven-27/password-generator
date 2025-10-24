@@ -2,11 +2,10 @@
 function App() {
 
   return (
-    <div className="">
-      
-          <h1>Password Generator</h1>
+    <main>
+      <h1 className="text-[clamp(1rem,4vw,1.5rem)] text-grey-700 leading-20 sm:leading-32 text-center">Password Generator</h1>
 
-  <p className="text-grey-600 text-32 bg-green p-32">P4$5W0rD!</p>
+  <p className="">P4$5W0rD!</p>
 
   Character Length
 
@@ -18,7 +17,7 @@ function App() {
   Strength
 
   Generate
-    </div>
+    </main>
   )
 }
 
