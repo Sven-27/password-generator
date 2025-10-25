@@ -1,6 +1,6 @@
 function length() {
   return (
-    <div>length</div>
+    <div>Character Length</div>
   )
 }
 

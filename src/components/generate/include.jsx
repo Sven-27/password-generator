@@ -1,6 +1,11 @@
 function include() {
   return (
-    <div>include</div>
+    <div>
+      Include Uppercase Letters
+  Include Lowercase Letters
+  Include Numbers
+  Include Symbols
+    </div>
   )
 }
 

@@ -1,6 +1,10 @@
 function generate() {
   return (
-    <div>generate</div>
+    <div>
+        Strength
+
+  Generate
+    </div>
   )
 }
 
