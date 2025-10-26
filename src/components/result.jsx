@@ -8,7 +8,7 @@ function result() {
         readOnly
         placeholder="P4$5W0rD!"
       />
-      <img src="./src/assets/images/icon-copy.svg" alt="copy icon" className="cursor-pointer"/>
+      <img src="./src/assets/images/icon-copy.svg" alt="copy icon" className="cursor-pointer w-[clamp(18px,4vw,24px)]"/>
     </div>
   )
 }
