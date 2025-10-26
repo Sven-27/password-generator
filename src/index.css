@@ -40,3 +40,27 @@
   --176: 11rem;
   --184: 11.5rem;
 }
+
+.slider {
+  @apply
+  [&::-webkit-slider-thumb]:appearance-none 
+  [&::-webkit-slider-thumb]:cursor-pointer 
+  [&::-webkit-slider-thumb]:border-none
+  [&::-webkit-slider-thumb]:h-[28px] 
+  [&::-webkit-slider-thumb]:w-[28px] 
+  [&::-webkit-slider-thumb]:rounded-full 
+  [&::-webkit-slider-thumb]:bg-slate-50;
+}
+
+.slider-active {
+  @apply
+  [&::-webkit-slider-thumb]:appearance-none
+  [&::-webkit-slider-thumb]:border-green 
+  [&::-webkit-slider-thumb]:border-2
+  [&::-webkit-slider-thumb]:border-solid
+  [&::-webkit-slider-thumb]:h-[28px] 
+  [&::-webkit-slider-thumb]:w-[28px] 
+  [&::-webkit-slider-thumb]:rounded-full
+  [&::-webkit-slider-thumb]:bg-black-200
+  [&::-webkit-slider-runnable-track]:bg-green; 
+}
