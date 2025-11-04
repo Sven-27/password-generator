@@ -1,4 +1,4 @@
-function result() {
+function Result() {
   return (
     <div className="flex items-center w-full bg-grey-900 p-4">
       <input 
@@ -13,4 +13,4 @@ function result() {
   )
 }
 
-export default result
+export default Result
