@@ -64,3 +64,40 @@
   [&::-webkit-slider-thumb]:bg-black-200
   [&::-webkit-slider-runnable-track]:bg-green; 
 }
+
+input[type="checkbox"] {
+  @apply
+  appearance-none 
+  h-5 
+  w-5 
+  mr-3
+  border-2 
+  border-solid 
+  border-grey-200 
+  bg-transparent 
+  cursor-pointer;
+
+  &:hover {
+    @apply
+    border-green;
+  }
+}
+
+input[type="checkbox"]:checked {
+  @apply
+  bg-green 
+  border-green
+  font-black
+  relative;
+
+  &::after {
+    @apply
+    content-['\2714'] 
+    absolute 
+    top-[-60%] 
+    min-w-full
+    text-black-200
+    text-center
+    text-[24px];
+  }
+}
