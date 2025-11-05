@@ -1,6 +1,6 @@
 function Result() {
   return (
-    <div className="flex items-center w-full bg-grey-900 p-4">
+    <div className="flex items-center w-full bg-grey-800 p-4">
       <input 
         className="w-full bg-transparent outline-none border-none text-white placeholder:text-grey-700 text-[clamp(24px,5vw,32px)]"
         id="result" 
