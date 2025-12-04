@@ -1,10 +1,24 @@
+import {useState} from "react";
 import Result from "./components/Result";
 import Length from "./components/Length";
 import Include from "./components/Include";
 import Strength from "./components/Strength";
 import Generate from "./components/Generate";
+import { LuRectangleVertical } from "react-icons/lu";
 
 function App() {
+
+  const [tooWeak, setTooWeak] = useState(`
+    <div class="flex items-center gap-2">
+      <p>Too Weak</p>
+      <div className="flex items-center gap-2">
+        <LuRectangleVertical className="bg-red" />
+        <LuRectangleVertical className="border border-2 border-white" />
+        <LuRectangleVertical className="border border-2 border-white" />
+        <LuRectangleVertical className="border border-2 border-white" />
+      </div>
+    </div>
+  `)
 
   return (
     <main className="w-[343px] sm:w-[540px]">
@@ -12,6 +26,7 @@ function App() {
       <div className="flex flex-col gap-4">
         <Result />
         <div className="w-full bg-grey-800 p-4">
+          {/* {tooWeak} */}
           <Length />
           <Include />
           <Strength />
