@@ -1,4 +1,4 @@
-import {useState, useEffect} from "react";
+import {useState} from "react";
 import Result from "./components/Result";
 import Length from "./components/Length";
 import Include from "./components/Include";
