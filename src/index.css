@@ -101,3 +101,13 @@ input[type="checkbox"]:checked {
     text-[24px];
   }
 }
+
+.indicator p{
+  @apply
+  text-white 
+  uppercase 
+  text-[clamp(18px,4vw,24px)]
+  tracking-wider
+  font-bold;
+
+}

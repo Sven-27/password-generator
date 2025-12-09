@@ -8,7 +8,7 @@ import { StrengthObject } from "./strength";
 
 function App() {
   console.log(StrengthObject.tooWeak);
-  const [tooWeak, setTooWeak] = useState(StrengthObject.empty);
+  const [tooWeak, setTooWeak] = useState(StrengthObject.strong);
 
 
   return (
