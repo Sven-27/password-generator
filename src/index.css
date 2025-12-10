@@ -109,5 +109,14 @@ input[type="checkbox"]:checked {
   text-[clamp(18px,4vw,24px)]
   tracking-wider
   font-bold;
+}
 
+button:hover svg path {
+  @apply
+  fill-green;
+}
+
+.copy:hover path {
+  @apply
+  fill-white;
 }
