@@ -59,10 +59,16 @@
   [&::-webkit-slider-thumb]:border-2
   [&::-webkit-slider-thumb]:border-solid
   [&::-webkit-slider-thumb]:h-[28px] 
+  [&::-webkit-slider-thumb]:mt-[-10px] 
   [&::-webkit-slider-thumb]:w-[28px] 
   [&::-webkit-slider-thumb]:rounded-full
   [&::-webkit-slider-thumb]:bg-black-200
-  [&::-webkit-slider-runnable-track]:bg-green; 
+  [&::-webkit-slider-runnable-track]:h-2;
+}
+
+.slider-color{
+  @apply
+  [&::-webkit-slider-runnable-track]:bg-green;
 }
 
 input[type="checkbox"] {

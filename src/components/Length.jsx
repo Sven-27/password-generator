@@ -8,7 +8,7 @@ function length({number, setNumber}) {
       <input
         type="range"
         id="length"
-        className="w-full appearance-none  bg-black-200 h-2 slider"
+        className={`w-full appearance-none  bg-black-200 h-2 ${number > 0 ? "slider-active" : "slider"} ${number <= number ? "slider-color" : ""}`}
         name="length"
         min="0"
         max="64"
