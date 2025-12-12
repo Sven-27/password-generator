@@ -5,7 +5,6 @@ function Result() {
         className="w-full bg-transparent outline-none border-none text-white placeholder:text-grey-700 text-[clamp(24px,5vw,32px)]"
         id="result" 
         type="text"  
-        readOnly
         placeholder="P4$5W0rD!"
       />
       <div className="flex items-center gap-4">

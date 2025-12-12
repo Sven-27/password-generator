@@ -7,8 +7,8 @@ import Generate from "./components/Generate";
 import { StrengthObject } from "./strength";
 
 function App() {
-  console.log(StrengthObject.tooWeak);
-  const [tooWeak, setTooWeak] = useState(StrengthObject.strong);
+  const [strength, setStrength] = useState(StrengthObject.empty);
+  const [length, setLength] = useState(0);
 
 
   return (
@@ -17,9 +17,9 @@ function App() {
       <div className="flex flex-col gap-4">
         <Result />
         <div className="w-full bg-grey-800 p-4">
-          <Length />
+          <Length number={length} setNumber={setLength} />
           <Include />
-          <Strength strength={tooWeak} />
+          <Strength strength={strength} />
           <Generate />
         </div>
       </div>
