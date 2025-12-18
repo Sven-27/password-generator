@@ -41,36 +41,6 @@
   --184: 11.5rem;
 }
 
-.slider {
-  @apply
-  [&::-webkit-slider-thumb]:appearance-none 
-  [&::-webkit-slider-thumb]:cursor-pointer 
-  [&::-webkit-slider-thumb]:border-none
-  [&::-webkit-slider-thumb]:h-[28px] 
-  [&::-webkit-slider-thumb]:w-[28px] 
-  [&::-webkit-slider-thumb]:rounded-full 
-  [&::-webkit-slider-thumb]:bg-slate-50;
-}
-
-.slider-active {
-  @apply
-  [&::-webkit-slider-thumb]:appearance-none
-  [&::-webkit-slider-thumb]:border-green 
-  [&::-webkit-slider-thumb]:border-2
-  [&::-webkit-slider-thumb]:border-solid
-  [&::-webkit-slider-thumb]:h-[28px] 
-  [&::-webkit-slider-thumb]:mt-[-10px] 
-  [&::-webkit-slider-thumb]:w-[28px] 
-  [&::-webkit-slider-thumb]:rounded-full
-  [&::-webkit-slider-thumb]:bg-black-200
-  [&::-webkit-slider-runnable-track]:h-2;
-}
-
-.slider-color{
-  @apply
-  [&::-webkit-slider-runnable-track]:bg-green;
-}
-
 input[type="checkbox"] {
   @apply
   appearance-none 
@@ -125,4 +95,19 @@ button:hover svg path {
 .copy:hover path {
   @apply
   fill-white;
+}
+
+.range-slider{
+  background: #18171F !important;
+}
+
+.range-slider__range {
+  background: #A4FFAF !important;
+}
+
+.single-thumb .range-slider__thumb[data-lower] {
+  width: 0;
+}
+.range-slider__thumb {
+ background: #A4FFAF !important;
 }

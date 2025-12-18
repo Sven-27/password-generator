@@ -1,20 +1,30 @@
+import { useRef } from "react";
+import RangeSlider from "react-range-slider-input";
+import "react-range-slider-input/dist/style.css";
+
 function length({number, setNumber}) {
+   const ref = useRef();
+
+  console.log(number);
   return (
-    <div className="w-full flex flex-col mb-4">
-      <label htmlFor="length" className="text-grey-200 flex justify-between items-center mb-4 text-[clamp(16px,4vw,18px)]">
+    <div className="w-full flex flex-col mb-7">
+      <div className="text-grey-200 flex justify-between items-center mb-4 text-[clamp(16px,4vw,18px)]">
         Character Length
-        <span id="number" className="mr-2 text-green text-[clamp(24px,4vw,32px)]">{number}</span>
-      </label>
-      <input
-        type="range"
+        <span id="number" className="mr-2 text-green text-[clamp(24px,4vw,32px)]">{number === 0 ? 0 : number[1]}</span>
+      </div>
+      <RangeSlider
         id="length"
-        className={`w-full appearance-none  bg-black-200 h-2 ${number > 0 ? "slider-active" : "slider"} ${number <= number ? "slider-color" : ""}`}
+        className="single-thumb w-full"
         name="length"
-        min="0"
-        max="64"
-        step="1"
+        min={0}
+        max={64}
+        step={1}
         value={number}
-        onChange={(e) => setNumber(Number(e.target.value))}
+        defaultValue={[0,0]}
+        thumbsDisabled={[true, false]}
+        ref={ref}
+        onInput={setNumber}
+        rangeSlideDisabled={true}
       />
     </div>
   )

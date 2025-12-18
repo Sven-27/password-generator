@@ -8,8 +8,7 @@ import { StrengthObject } from "./strength";
 
 function App() {
   const [strength, setStrength] = useState(StrengthObject.empty);
-  const [length, setLength] = useState(0);
-
+  const [length, setLength] = useState(0);  
 
   return (
     <main className="w-[343px] sm:w-[540px]">
