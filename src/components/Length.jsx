@@ -1,6 +1,6 @@
 import { useRef } from "react";
 import RangeSlider from "react-range-slider-input";
-import "react-range-slider-input/dist/style.css";
+
 
 function length({number, setNumber}) {
    const ref = useRef();
@@ -10,7 +10,7 @@ function length({number, setNumber}) {
     <div className="w-full flex flex-col mb-7">
       <div className="text-grey-200 flex justify-between items-center mb-4 text-[clamp(16px,4vw,18px)]">
         Character Length
-        <span id="number" className="mr-2 text-green text-[clamp(24px,4vw,32px)]">{number === 0 ? 0 : number[1]}</span>
+        <span id="number" className="mr-2 text-green text-[clamp(24px,4vw,32px)]">{`${number === 0 ? 0 : number[1]}`}</span>
       </div>
       <RangeSlider
         id="length"
@@ -24,8 +24,8 @@ function length({number, setNumber}) {
         thumbsDisabled={[true, false]}
         ref={ref}
         onInput={setNumber}
-        rangeSlideDisabled={true}
       />
+
     </div>
   )
 }

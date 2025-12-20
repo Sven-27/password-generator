@@ -97,6 +97,8 @@ button:hover svg path {
   fill-white;
 }
 
+
+ /* Custom styles for react-range-slider-input */
 .range-slider{
   background: #18171F !important;
 }
@@ -108,6 +110,8 @@ button:hover svg path {
 .single-thumb .range-slider__thumb[data-lower] {
   width: 0;
 }
-.range-slider__thumb {
- background: #A4FFAF !important;
+
+.range-slider .range-slider__thumb[data-active] {
+  border: 2px solid #A4FFAF !important;
+  background: #08070B !important;
 }
