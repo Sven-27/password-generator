@@ -3,28 +3,86 @@ import Result from "./components/Result";
 import Length from "./components/Length";
 import Include from "./components/Include";
 import Strength from "./components/Strength";
+import Errors from "./components/Errors";
 import Generate from "./components/Generate";
 import { StrengthObject } from "./strength";
 
 function App() {
   const [strength, setStrength] = useState(StrengthObject.empty);
-  const [length, setLength] = useState(0);  
+  const [password, setPassword] = useState("");
+  const [passwordLength, setPasswordLength] = useState(0);  
   const [include, setInclude] = useState({
     uppercase: false,
     lowercase: false,
     numbers: false,
     symbols: false
   });
+  const [errors, setErrors] = useState("");
+
+  const generatePassword = () => {
+    setErrors("");
+    if (!include.uppercase && !include.lowercase && !include.numbers && !include.symbols) {
+      return setErrors("Invalid password criteria");
+    } else if (passwordLength === 0 || passwordLength[1] === 0) {
+      return setErrors("Password length cannot be 0");
+    } else if (passwordLength === "" || passwordLength[1] === "") {
+      return setErrors("Invalid password length");
+    } else if (passwordLength[1] < 8) {
+      setPassword("");
+      return setErrors("Password length must be at least 8 characters");
+    } else if (passwordLength[1] >= 65) {
+      setPassword("");
+      return setErrors("Password length cannot exceed 30 characters");
+    }
+
+    let password = "";
+    for (let i = 0; i < passwordLength[1]; i++) {
+      let choice = random(0, 3);
+      if (include.lowercase && choice === 0) {
+        password += randomLower();
+      } else if (include.uppercase && choice === 1) {
+        password += randomUpper();
+      } else if (include.symbols && choice === 2) {
+        password += randomSymbol();
+      } else if (include.numbers && choice === 3) {
+        password += random(0, 9);
+      } else {
+        i--;
+      }
+    }
+    setPassword(password);
+  };
+  const random = (min = 0, max = 1) => {
+    return Math.floor(Math.random() * (max + 1 - min) + min);
+  };
+
+  const randomLower = () => {
+    return String.fromCharCode(random(97, 122));
+  };
+
+  const randomUpper = () => {
+    return String.fromCharCode(random(65, 90));
+  };
+
+  const randomSymbol = () => {
+    const symbols = "~*$%@#^&!?*'-=/,.{}()[]<>";
+    return symbols[random(0, symbols.length - 1)];
+  };
+
+  console.log(errors);
+  console.log(password)
 
   return (
     <main className="w-[343px] sm:w-[540px]">
       <h1 className="text-[clamp(1rem,4vw,1.5rem)] text-grey-700 leading-20 sm:leading-32 text-center">Password Generator</h1>
       <div className="flex flex-col gap-4">
-        <Result />
+        <Result
+          password={password}
+        />
         <div className="w-full bg-grey-800 p-4">
           <Length 
-            number={length} 
-            setNumber={setLength} 
+            number={passwordLength} 
+            setNumber={setPasswordLength} 
           />
           <Include 
             uppercase={include.uppercase}     
@@ -36,8 +94,15 @@ function App() {
             setNumbers={(e) => setInclude({...include, numbers: e.target.checked})} 
             setSymbols={(e) => setInclude({...include, symbols: e.target.checked})}
            />
-          <Strength strength={strength} />
-          <Generate />
+          <Strength 
+            strength={strength} 
+          />
+          <Errors 
+            errors={errors}
+          />
+          <Generate  
+            generatePassword={generatePassword}
+          />
         </div>
       </div>
     </main>
