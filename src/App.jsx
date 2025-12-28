@@ -13,11 +13,18 @@ function App() {
   const [passwordLength, setPasswordLength] = useState(0);  
   const [include, setInclude] = useState({
     uppercase: false,
-    lowercase: false,
+    lowercase: true,
     numbers: false,
     symbols: false
   });
   const [errors, setErrors] = useState("");
+
+   const calculateStrength = () => {
+    if(passwordLength[1] > 0 && (include.lowercase || include.uppercase || include.numbers || include.symbols)) setStrength(StrengthObject.tooWeak);
+    if(passwordLength[1] > 8 && (include.lowercase && (include.uppercase || include.numbers || include.symbols))) setStrength(StrengthObject.weak);
+    if(passwordLength[1] > 16 && (include.lowercase && (include.uppercase && include.numbers) || (include.uppercase && include.symbols) || (include.numbers && include.symbols))) setStrength(StrengthObject.medium);
+    if(passwordLength[1] > 24 && include.lowercase && include.uppercase && include.numbers && include.symbols) setStrength(StrengthObject.strong);
+  }
 
   const generatePassword = () => {
     setErrors("");
@@ -27,12 +34,6 @@ function App() {
       return setErrors("Password length cannot be 0");
     } else if (passwordLength === "" || passwordLength[1] === "") {
       return setErrors("Invalid password length");
-    } else if (passwordLength[1] < 8) {
-      setPassword("");
-      return setErrors("Password length must be at least 8 characters");
-    } else if (passwordLength[1] >= 65) {
-      setPassword("");
-      return setErrors("Password length cannot exceed 30 characters");
     }
 
     let password = "";
@@ -51,6 +52,7 @@ function App() {
       }
     }
     setPassword(password);
+    calculateStrength();
   };
   const random = (min = 0, max = 1) => {
     return Math.floor(Math.random() * (max + 1 - min) + min);
@@ -68,9 +70,6 @@ function App() {
     const symbols = "~*$%@#^&!?*'-=/,.{}()[]<>";
     return symbols[random(0, symbols.length - 1)];
   };
-
-  console.log(errors);
-  console.log(password)
 
   return (
     <main className="w-[343px] sm:w-[540px]">

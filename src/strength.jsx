@@ -31,7 +31,7 @@ export const StrengthObject = {
     ),
     medium: (
         <div className="flex items-center gap-4">
-            <p>Strong</p>
+            <p>Medium</p>
             <div className="flex items-center gap-2">
                 <div className="bg-yellow w-[0.65rem] h-7" />
                 <div className="bg-yellow w-[0.65rem] h-7" />
