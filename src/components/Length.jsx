@@ -19,7 +19,6 @@ function length({number, setNumber}) {
         thumbsDisabled={[true, false]}
         onInput={setNumber}
       />
-
     </div>
   )
 }

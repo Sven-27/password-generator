@@ -1,5 +1,3 @@
-
-
 function Strength({strength}) {
   return (
     <div className="bg-grey-900 py-4 px-6 mt-6 flex items-center justify-between">
