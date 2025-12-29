@@ -77,6 +77,7 @@ function App() {
       <div className="flex flex-col gap-4">
         <Result
           password={password}
+          copyToClipboard={navigator.clipboard.writeText(password)}
         />
         <div className="w-full bg-grey-800 p-4">
           <Length 
