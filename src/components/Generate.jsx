@@ -1,6 +1,7 @@
 function generate({generatePassword}) {
   return (
     <button 
+      type="button"
       className="bg-green w-full py-4 text-grey-800 uppercase font-bold tracking-wider mt-5 hover:bg-transparent hover:text-green border border-green  flex items-center justify-center gap-2"
       onClick={generatePassword}
     > 

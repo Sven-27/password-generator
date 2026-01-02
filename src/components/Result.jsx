@@ -24,7 +24,11 @@ function Result({password, copyToClipboard}) {
           copied
         </p>
         )}
-        <button aria-label="Copy to clipboard" onClick={(() => copyToClipboard()) && (() => displayCopied())}>
+        <button
+          type="button" 
+          aria-label="Copy to clipboard" 
+          onClick={(() => copyToClipboard()) && (() => displayCopied())}
+        >
         <svg 
           className="copy cursor-pointer" 
           // onClick={(() => copyToClipboard()) && (() => displayCopied())}
