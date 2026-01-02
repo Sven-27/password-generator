@@ -2,8 +2,7 @@
   "name": "package.json",
   "version": "0.0.0",
   "type": "module",
-  "private": true,
-  "homepage": "https://Sven-27.github.io/password-generator",
+  "private": true
   "scripts": {
     "dev": "vite",
     "build": "vite build",
