@@ -18,6 +18,8 @@ function length({number, setNumber}) {
         defaultValue={[0,0]}
         thumbsDisabled={[true, false]}
         onInput={setNumber}
+        aria-label="Volume control slider"
+        tabindex={[-1, 0]}
       />
     </div>
   )

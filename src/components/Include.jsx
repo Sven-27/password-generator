@@ -6,7 +6,7 @@ function include({ uppercase, lowercase, numbers, symbols, setUppercase, setLowe
         <label htmlFor="uppercase" className="ml-2 text-grey-200 text-[clamp(16px,4vw,18px)]">Include Uppercase Letters</label>
       </div>
       <div className="flex items-center mb-4">
-        <input type="checkbox" id="lowercase" name="lowercase" checked={lowercase} onChange={setLowercase} readOnly />
+        <input type="checkbox" id="lowercase" name="lowercase" checked={lowercase} onChange={setLowercase} />
         <label htmlFor="lowercase" className="ml-2 text-grey-200 text-[clamp(16px,4vw,18px)]">Include Lowercase Letters</label>
       </div>
       <div className="flex items-center mb-4">
