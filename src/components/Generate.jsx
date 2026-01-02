@@ -3,15 +3,12 @@ function generate({generatePassword}) {
     <button 
       className="bg-green w-full py-4 text-grey-800 uppercase font-bold tracking-wider mt-5 hover:bg-transparent hover:text-green border border-green  flex items-center justify-center gap-2"
       onClick={generatePassword}
-      aria-label="Copy to clipboard"
     > 
       Generate
       <svg 
         width="12" 
         height="12" 
         xmlns="http://www.w3.org/2000/svg"
-        aria-hidden="true" 
-        focusable="false"
       >
         <path 
           fill="#24232C" 
