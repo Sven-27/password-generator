@@ -5,6 +5,9 @@ function Result({password, copyToClipboard}) {
 
   const displayCopied = () => {
     setCopied(true);
+    setTimeout(() => {
+      setCopied(false);
+    }, 3000);
   }
 
   return (
@@ -45,5 +48,4 @@ function Result({password, copyToClipboard}) {
     </div>  
   )
 }
-
 export default Result
